@@ -7,8 +7,8 @@ import (
 )
 
 func SaveGlucose(c *gin.Context) {
-	glucose := c.Param("last")
-	gap := c.Param("gap")
+	glucose := c.Query("last")
+	gap := c.Query("gap")
 
 	db.Save(glucose, gap)
 
